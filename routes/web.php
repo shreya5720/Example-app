@@ -19,3 +19,5 @@ Route::put('/product/update/{id}',[ProductController::class,'update'])->name('pr
 Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
 Route::post('/products',[ProductController::class,'store'])->name('product.store');
 Route::delete('/product/destroy/{id}',[ProductController::class,'destroy'])->name('product.destroy');
+
+Route::get('/product/filterById', [App\Http\Controllers\ProductController::class, 'filterById'])->name('product.filterById');

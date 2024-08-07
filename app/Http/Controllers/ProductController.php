@@ -97,5 +97,12 @@ public function destroy($id){
     $product->delete();
     return redirect()->route('product.index')->with('success','Product deleted Successfully');
 }
-
+public function filterbyid(Request $request){
+    $request=validate([
+        'id' =>'required|array',
+        'ids.*'=>'integer'        
+    ]);
+    $product=Product::whereIn('id',$request->input('ids'))->get();
+    return view('product.filter',compact('products'));
+}
 }
