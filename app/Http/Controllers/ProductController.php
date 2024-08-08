@@ -113,6 +113,10 @@ public function home(Request $request){
     // return  $request;
 }
 
+public function home(Request $request){
+    return  $request;
+}
+
 }
 
 
