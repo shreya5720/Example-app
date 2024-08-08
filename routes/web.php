@@ -21,3 +21,6 @@ Route::post('/products',[ProductController::class,'store'])->name('product.store
 Route::delete('/product/destroy/{id}',[ProductController::class,'destroy'])->name('product.destroy');
 
 Route::get('/product/filterById', [App\Http\Controllers\ProductController::class, 'filterById'])->name('product.filterById');
+
+
+Route::post('/shreya',[ProductController::class,'home']);

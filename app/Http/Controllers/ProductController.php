@@ -105,4 +105,14 @@ public function filterbyid(Request $request){
     $product=Product::whereIn('id',$request->input('ids'))->get();
     return view('product.filter',compact('products'));
 }
+
+public function home(Request $request){
+
+    $name= $request->name;
+    return $name;
+    // return  $request;
 }
+
+}
+
+
