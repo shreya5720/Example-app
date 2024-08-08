@@ -98,4 +98,8 @@ public function destroy($id){
     return redirect()->route('product.index')->with('success','Product deleted Successfully');
 }
 
+public function home(Request $request){
+    return  $request;
+}
+
 }
