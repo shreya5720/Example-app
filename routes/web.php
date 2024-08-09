@@ -22,11 +22,9 @@ Route::get('/product/create',[ProductController::class,'create'])->name('product
 Route::post('/products',[ProductController::class,'store'])->name('product.store');
 
 Route::delete('/product/destroy/{id}',[ProductController::class,'destroy'])->name('product.destroy');
-
-
-
 Route::post('/shreya',[ProductController::class,'home']);
 Route::post('/student',[StudentController::class,'store']);
-Route::get('/data',[StudentController::class,'view']);
-Route::put('/update-data',[StudentController::class,'update']);
+
+Route::put('/update-data/{id}',[StudentController::class,'update']);
+Route::delete('/delete-data/{id}',[StudentController::class,'delete']);
 ?>

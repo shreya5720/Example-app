@@ -24,4 +24,20 @@ class StudentController extends Controller
         $view=students::all();
         return response()->json($view);
     }
+    
+    public function update($id,Request $request){
+        $update=students::find($id);
+        $update->update($request->all());
+        return response()->json($update);
+    }
+    public function delete($id){
+        $delete=students::find($id);
+        $delete->delete();
+        return response()->json($delete);
+    }
+    public function select(){
+        $select_data=students::where('Marks','>',50)->get();
+        return response()->json($select_data);
+    }
+
 }
