@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StudentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +26,7 @@ Route::delete('/product/destroy/{id}',[ProductController::class,'destroy'])->nam
 
 
 Route::post('/shreya',[ProductController::class,'home']);
+Route::post('/student',[StudentController::class,'store']);
+Route::get('/data',[StudentController::class,'view']);
+Route::put('/update-data',[StudentController::class,'update']);
 ?>
