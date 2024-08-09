@@ -111,11 +111,8 @@ public function home(Request $request){
     $name= $request->name;
     return $name;
     // return  $request;
-}
+}   
 
-public function home(Request $request){
-    return  $request;
-}
 
 }
 

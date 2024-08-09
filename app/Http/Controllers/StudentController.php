@@ -35,9 +35,13 @@ class StudentController extends Controller
         $delete->delete();
         return response()->json($delete);
     }
-    public function select(){
+    public function where(){
         $select_data=students::where('Marks','>',50)->get();
         return response()->json($select_data);
+    }
+    public function select(){
+        $select=students::select('name','Marks')->get();
+        return response()->json($select);
     }
 
 }

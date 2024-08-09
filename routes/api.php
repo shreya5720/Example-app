@@ -20,5 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     
 });
 Route::get('/data',[StudentController::class,'view']);
+Route::get('/where',[StudentController::class,'where']);
 Route::get('/select',[StudentController::class,'select']);
 ?>
